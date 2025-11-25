@@ -8,7 +8,7 @@
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-image: url('images/bg-img.png');
+  background-image: url('bg-img.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -251,7 +251,7 @@ body {
   color:#f3f2df;
   font-size: 40px;
   padding-bottom: 40px;
-  padding-top: 80px;
+  padding-top: 80px;  
   white-space: nowrap;
   line-height: 1.2;
 }
