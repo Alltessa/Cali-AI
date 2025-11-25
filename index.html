@@ -53,6 +53,15 @@
     </div>
   </div>
 </div>
+const fileInput = document.getElementById('fileInput');
+const detectBtn = document.getElementById('detectBtn');
 
+// Enable button when image is selected
+fileInput.addEventListener('change', function() {
+  if (fileInput.files.length > 0) {
+    detectBtn.disabled = false;
+  }
+});
 </body>
 </html>
+
