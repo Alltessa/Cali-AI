@@ -143,7 +143,7 @@ body {
 .btn {
   width: 100%;
   padding: 10px 15px;
-  background: #2f7d2f;
+  background: #718540;
   color: #f3f2df;
   border: none;
   border-radius: 8px;
@@ -231,7 +231,7 @@ body {
 }
 
 .back-btn:hover {
-  background: #2f7d2f;
+  background: #718540;
 }
 
 .description-container {
