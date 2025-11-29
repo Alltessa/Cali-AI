@@ -19,24 +19,30 @@
 
 <div class="main-container">
   <div class="right-section">
-    <div class="upload-card">
+    <div class="result-container">
       <div class="result-card show">
-        <div class="result-image">
-            <img id="resultImg" src="" alt="detected image">
+        <div class="result-layout">
+          <div class="result-image-container">
+            <div class="result-image">
+              <img id="resultImg" src="" alt="detected image">
+            </div>
           </div>
-        <div class="result-details">
-          <h2>Detection Results:</h2>
-          <div class="result-label">
-            <strong>Disease:</strong> <span id="diseaseName">-</span>
-          </div>
-          <div class="result-confidence">
-            <strong>Confidence:</strong> <span id="confidence">-</span>
-          </div>
-          <div class="result-description">
-            <strong>Description:</strong> <span id="description">-</span>
+          <div class="result-content">
+            <div class="result-details">
+              <h2>Detection Results:</h2>
+              <div class="result-label">
+                <strong>Disease:</strong> <span id="diseaseName">-</span>
+              </div>
+              <div class="result-confidence">
+                <strong>Confidence:</strong> <span id="confidence">-</span>
+              </div>
+              <div class="result-description">
+                <strong>Description:</strong> <span id="description">-</span>
+              </div>
+            </div>
+            <a href="index.html"><button class="back-btn">Analyze Another Image</button></a>
           </div>
         </div>
-        <a href="index.html"><button class="back-btn">Analyze Another Image</button></a>
       </div>
     </div>
   </div>

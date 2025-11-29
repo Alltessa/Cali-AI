@@ -25,7 +25,9 @@
         <div class="upload-box">
           <input type="file" id="fileInput" name="image" accept="image/*" required>
           <label for="fileInput" class="upload-label">
-            <div class="upload-btn">Upload Image</div>
+            <div class="upload-btn"><span>Upload Image</span>
+              <span class="drag-text"><br>Click to browse or drag the file here</span>
+            </div>
             <p class="upload-info">Maximum size: 10MB <br> Image Format: jpg or png 
               <br> <em>Note: For best result, use a clear photo between 1-5MB</em> </p>
           </label>
@@ -56,6 +58,26 @@
 <script>
 const fileInput = document.getElementById('fileInput');
 const detectBtn = document.getElementById('detectBtn');
+const uploadBox = document.querySelector('.upload-box');
+
+uploadBox.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadBox.style.background = 'rgba(113, 133, 64, 0.3)';
+});
+
+  uploadBox.addEventListener('dragleave', () => {
+    uploadBox.style.background = '';
+});
+
+  uploadBox.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadBox.style.background = '';
+    fileInput.files = e.dataTransfer.files;
+
+    if (fileInput.files.length > 0) {
+        detectBtn.disabled = false;
+    }    
+});
 
 // Enable button when image is selected
 fileInput.addEventListener('change', function() {
@@ -63,6 +85,19 @@ fileInput.addEventListener('change', function() {
     detectBtn.disabled = false;
   }
 });
+
+// Reset form when page loads
+window.addEventListener('DOMContentLoaded', function() {
+  fileInput.value = '';
+  detectBtn.disabled = true;
+  
+  // Clear any preview if exists
+  const preview = document.querySelector('.image-preview');
+  if (preview) {
+    preview.classList.remove('show');
+  }
+});
+
 </script>
 </body>
 </html>
